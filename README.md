@@ -23,8 +23,54 @@ Proyecto base estructurado para un sistema ERP pequeño, compuesto por una inter
 │   │   └── main.jsx
 │   ├── package.json
 │   └── vite.config.js        # Configuración de Vite con proxy a localhost:5000
+├── asistencia/               # Registros de asistencia y verificación de entorno
 └── README.md                 # Guía general de inicio
 ```
+
+## 🎓 Para Estudiantes: Sincronización y Asistencia con Antigravity
+
+Si estás usando **Antigravity**, puedes sincronizar tu entorno con la última versión del repositorio y registrar tu asistencia/verificación de configuración mediante un simple mensaje en el chat de Antigravity.
+
+### 💬 Prompt para Antigravity
+
+Copia y pega el siguiente mensaje en el chat de Antigravity (sustituyendo `<tu_usuario>` por tu nombre o usuario de GitHub):
+
+```text
+Sincroniza la última versión del repositorio y registra mi confirmación de asistencia y entorno con mi usuario: <tu_usuario>
+```
+
+#### 🤖 ¿Qué realiza Antigravity automáticamente?
+1. **Actualiza tu código:** Ejecuta `git pull origin main` para descargar los últimos cambios de la clase.
+2. **Verifica tus herramientas locales:** Revisa que `python3`, `node` y `npm` estén instalados y funcionando.
+3. **Genera tu registro individual:** Crea o actualiza tu archivo en `asistencia/<tu_usuario>.md` con la fecha y versiones de tu entorno (evitando conflictos de merge entre compañeros).
+4. **Crea el commit y lo sube:** Hace commit con tu nombre de usuario (`Asistencia: Confirmación de entorno de <tu_usuario>`) y ejecuta `git push origin main`.
+
+<details>
+<summary><b>🛠️ Ver comandos manuales equivalentes de Git</b></summary>
+
+Si deseas realizar el proceso manualmente por terminal:
+```bash
+# 1. Bajar la última versión del repositorio
+git pull origin main
+
+# 2. Crear tu archivo de confirmación
+mkdir -p asistencia
+cat <<EOF > asistencia/<tu_usuario>.md
+# Confirmación de Entorno y Asistencia
+- **Estudiante / Usuario:** <tu_usuario>
+- **Fecha:** $(date)
+- **Python:** $(python3 --version 2>&1)
+- **Node.js:** $(node -v 2>&1)
+- **NPM:** $(npm -v 2>&1)
+- **Estado:** Entorno verificado y sincronizado
+EOF
+
+# 3. Crear commit y subir al repositorio
+git add asistencia/<tu_usuario>.md
+git commit -m "Asistencia: Confirmación de entorno de <tu_usuario>"
+git push origin main
+```
+</details>
 
 ---
 
