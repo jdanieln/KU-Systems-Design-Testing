@@ -2,19 +2,23 @@
 
 Esta regla define el flujo automatizado cuando un estudiante solicita registrar su asistencia, sincronizar los últimos cambios o confirmar la configuración de su entorno en Antigravity.
 
-## Triggers del Prompt
-Se activa ante prompts como:
-- "Sincroniza la última versión y sube mi confirmación de asistencia con mi usuario: <usuario>"
-- "Registra mi asistencia y sincroniza mi entorno"
-- "Baja los últimos cambios del repo y sube mi confirmación de entorno"
-- O cualquier instrucción similar relacionada con asistencia / check-in / confirmación de entorno.
+## Triggers del Prompt en Lenguaje Natural
+Los alumnos **no conocen Git ni terminología técnica**. Hablarán en lenguaje cotidiano.
+Debes activar este flujo con cualquier frase equivalente a:
+- *"Hola, actualiza mi proyecto con lo último del curso y registra mi asistencia. Mi usuario/nombre es [usuario]"*
+- *"Pasa mi asistencia de hoy y descarga los cambios de la clase. Soy [usuario]"*
+- *"Revisa si mi entorno está listo para la clase y regístrame. Mi nombre es [usuario]"*
+- *"Actualiza el código y confirma mi asistencia"*
+- *"Hola, vengo llegando a clase, registra mi asistencia"*
 
 ## Procedimiento a Ejecutar por Antigravity
 
-1. **Identificar al Estudiante / Usuario:**
-   - Extraer el nombre de usuario indicado en el mensaje del alumno.
-   - Si no lo especificó en el prompt, consultar la configuración local de Git (`git config user.name` o `git config user.email`) o pedirle brevemente su usuario.
-   - Normalizar el nombre de usuario para el nombre de archivo (letras, números, guiones: e.g., `juan-perez`).
+1. **Identificar al Estudiante / Usuario (Amigable y sin tecnicismos):**
+   - Extraer el nombre o usuario si el alumno lo incluyó en el mensaje.
+   - Si **no** lo indicó:
+     - Revisa primero si está configurado en `git config user.name`.
+     - Si no hay un nombre claro, pregúntale de forma cordial: *"¡Hola! Con gusto actualizo tu proyecto y registro tu asistencia. ¿Cuál es tu nombre completo o usuario de GitHub para el registro?"*.
+   - Limpia y normaliza el identificador para el archivo (ejemplo: `pedro-perez` o su usuario de GitHub).
 
 2. **Sincronizar la Última Versión del Repositorio:**
    - Ejecutar:

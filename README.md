@@ -27,23 +27,27 @@ Proyecto base estructurado para un sistema ERP pequeño, compuesto por una inter
 └── README.md                 # Guía general de inicio
 ```
 
-## 🎓 Para Estudiantes: Sincronización y Asistencia con Antigravity
+## 🎓 Para Estudiantes: Asistencia y Actualización con Antigravity
 
-Si estás usando **Antigravity**, puedes sincronizar tu entorno con la última versión del repositorio y registrar tu asistencia/verificación de configuración mediante un simple mensaje en el chat de Antigravity.
+No necesitas saber usar la terminal ni conocer comandos de Git. Al abrir este proyecto en **Antigravity**, simplemente escribe en el chat como si estuvieras conversando:
 
-### 💬 Prompt para Antigravity
+### 💬 ¿Qué puedes escribirle en el chat?
 
-Copia y pega el siguiente mensaje en el chat de Antigravity (sustituyendo `<tu_usuario>` por tu nombre o usuario de GitHub):
+Puedes copiar o adaptar cualquiera de estos mensajes:
 
-```text
-Sincroniza la última versión del repositorio y registra mi confirmación de asistencia y entorno con mi usuario: <tu_usuario>
-```
+> **"Hola, actualiza mi proyecto con lo último del curso y registra mi asistencia. Mi nombre es `tu_nombre_o_usuario`"**
 
-#### 🤖 ¿Qué realiza Antigravity automáticamente?
-1. **Actualiza tu código:** Ejecuta `git pull origin main` para descargar los últimos cambios de la clase.
-2. **Verifica tus herramientas locales:** Revisa que `python3`, `node` y `npm` estén instalados y funcionando.
-3. **Genera tu registro individual:** Crea o actualiza tu archivo en `asistencia/<tu_usuario>.md` con la fecha y versiones de tu entorno (evitando conflictos de merge entre compañeros).
-4. **Crea el commit y lo sube:** Hace commit con tu nombre de usuario (`Asistencia: Confirmación de entorno de <tu_usuario>`) y ejecuta `git push origin main`.
+Otras formas naturales que también entiende:
+- *"Pasa mi asistencia de hoy y descarga los cambios de la clase. Soy `tu_nombre`"*
+- *"Revisa si mi entorno está listo para la clase y regístrame. Mi usuario de GitHub es `tu_usuario`"*
+- O incluso solo: *"Hola, registra mi asistencia de hoy"* (Antigravity te preguntará amablemente tu nombre si no lo sabe y se encargará de todo).
+
+#### 🪄 ¿Qué hace Antigravity automáticamente por ti?
+Sin que tengas que escribir ningún comando en la terminal:
+1. **Descarga lo último de la clase:** Actualiza tu proyecto con los cambios más recientes que haya subido el profesor.
+2. **Revisa tu computadora:** Comprueba que tengas Python y Node.js correctamente instalados.
+3. **Crea tu comprobante:** Registra un archivo individual en `asistencia/<tu_nombre>.md` para evitar cruces con tus compañeros.
+4. **Lo sube a GitHub:** Guarda los cambios y los sube con tu nombre para que el profesor confirme tu asistencia y entorno.
 
 <details>
 <summary><b>🛠️ Ver comandos manuales equivalentes de Git</b></summary>
