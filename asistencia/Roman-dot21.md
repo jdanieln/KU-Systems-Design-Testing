@@ -1,0 +1,7 @@
+# Confirmación de Entorno y Asistencia
+- **Estudiante / Usuario:** Roman-dot21
+- **Fecha:** 2026-09-18 09:36
+- **Versión de Python:** Python 3.12.10
+- **Versión de Node.js:** v24.19.0
+- **Versión de NPM:** 11.17.0
+- **Estado del Entorno:** Configurado y verificado
